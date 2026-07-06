@@ -14,6 +14,8 @@ async function loadProperty(){
         property.description;
 
     renderGallery(property);
+    renderHighlights(property);
+    renderCTA(property);
 
 }
 
@@ -44,5 +46,49 @@ function renderGallery(property){
         gallery.appendChild(item);
 
     });
+
+}
+function renderHighlights(property){
+
+    const container = document.getElementById("highlights-grid");
+
+    container.innerHTML = "";
+
+    property.highlights.forEach(item=>{
+
+        const card=document.createElement("div");
+        card.className="highlight-card";
+
+        card.innerHTML=`
+
+            <div class="highlight-icon">${item.icon}</div>
+
+            <h3>${item.title}</h3>
+
+            <p>${item.text}</p>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+function renderCTA(property){
+
+    document.getElementById("cta-title").textContent =
+        property.cta.title;
+
+    document.getElementById("cta-text").textContent =
+        property.cta.text;
+
+    const callBtn = document.getElementById("call-btn");
+    callBtn.textContent = property.cta.callButton;
+    callBtn.href = `tel:${property.contact.phone}`;
+
+    const bleBtn = document.getElementById("ble-btn");
+    bleBtn.textContent = property.cta.bleButton;
+    bleBtn.href = `https://ble.ir/${property.contact.ble}`;
+    bleBtn.target = "_blank";
 
 }
