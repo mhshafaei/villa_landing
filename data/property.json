@@ -4,10 +4,43 @@
   "subtitle": "گاهی آرامش، فقط یک آدرس دارد.",
   "description": "ویلایی دوبلکس با چشم‌انداز دائمی شالیزار، محیطی دنج با دسترسی کامل به امکانات و تنها ۱۵ دقیقه تا ساحل.",
 
-  "location": {
-    "province": "'گیلان'",
-    "distance_to_sea": "۱۵ دقیقه"
-  },
+ "location": {
+    "province": "گیلان",
+    "city": "خشکبیجار",
+
+    "latitude": 37.370291,
+    "longitude": 49.790197,
+
+    "mapUrl": "https://maps.google.com/?q=37.370291,49.790197",
+
+    "distances":[
+        {
+            "icon":"waves",
+            "title":"دریا",
+            "value":"۱۵ دقیقه"
+        },
+        {
+            "icon":"building",
+            "title":"مرکز شهر",
+            "value":"۱۰ دقیقه"
+        },
+        {
+            "icon":"shopping-cart",
+            "title":"فروشگاه",
+            "value":"۳ دقیقه"
+        },
+        {
+            "icon":"hospital",
+            "title":"بیمارستان",
+            "value":"۱۲ دقیقه"
+        },
+        {
+            "icon":"school",
+            "title":"مدرسه",
+            "value":"۸ دقیقه"
+        }
+    ]
+},
 
   "features": [
     "دوبلکس",

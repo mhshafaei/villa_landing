@@ -17,10 +17,11 @@ async function loadProperty(){
     renderHighlights(property);
     renderCTA(property);
 
-console.log(property);
-console.log(property.specifications);
+// console.log(property);
+// console.log(property.specifications);
 
     renderSpecifications(property);
+    renderLocation(property);
 
 }
 
@@ -128,6 +129,48 @@ function renderSpecifications(property){
             <div>
                 <div class="spec-label">${item.label}</div>
                 <div class="spec-value">${item.value}</div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+    lucide.createIcons();
+
+}
+function renderLocation(property){
+
+    // نقشه
+    const map = document.getElementById("location-map");
+
+    map.innerHTML = `
+        <iframe
+            src="https://maps.google.com/maps?q=${property.location.latitude},${property.location.longitude}&z=14&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    `;
+
+    // کارت‌های فاصله
+    const grid = document.getElementById("distance-grid");
+
+    grid.innerHTML = "";
+
+    property.location.distances.forEach(item=>{
+
+        const card = document.createElement("div");
+
+        card.className = "distance-card";
+
+        card.innerHTML = `
+            <div class="distance-icon">
+                <i data-lucide="${item.icon}"></i>
+            </div>
+
+            <div>
+                <div class="distance-title">${item.title}</div>
+                <div class="distance-value">${item.value}</div>
             </div>
         `;
 
