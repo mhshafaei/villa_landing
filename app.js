@@ -17,6 +17,11 @@ async function loadProperty(){
     renderHighlights(property);
     renderCTA(property);
 
+console.log(property);
+console.log(property.specifications);
+
+    renderSpecifications(property);
+
 }
 
 loadProperty();
@@ -61,7 +66,9 @@ function renderHighlights(property){
 
         card.innerHTML=`
 
-            <div class="highlight-icon">${item.icon}</div>
+            <div class="highlight-icon">
+    <i data-lucide="${item.icon}"></i>
+</div>
 
             <h3>${item.title}</h3>
 
@@ -72,6 +79,7 @@ function renderHighlights(property){
         container.appendChild(card);
 
     });
+    lucide.createIcons();
 
 }
 function renderCTA(property){
@@ -90,5 +98,43 @@ function renderCTA(property){
     bleBtn.textContent = property.cta.bleButton;
     bleBtn.href = `https://ble.ir/${property.contact.ble}`;
     bleBtn.target = "_blank";
+
+}
+
+
+    AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80
+    });
+
+function renderSpecifications(property){
+
+    const grid = document.getElementById("specifications-grid");
+
+    grid.innerHTML = "";
+
+    property.specifications.forEach(item=>{
+
+        const card = document.createElement("div");
+
+        card.className = "spec-card";
+
+        card.innerHTML = `
+            <div class="spec-icon">
+                <i data-lucide="${item.icon}"></i>
+            </div>
+
+            <div>
+                <div class="spec-label">${item.label}</div>
+                <div class="spec-value">${item.value}</div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+    lucide.createIcons();
 
 }

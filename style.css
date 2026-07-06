@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: Tahoma, sans-serif;
+    font-family: Vazirmatn, sans-serif;
     background: #ffffff;
     color: #222;
     line-height: 1.8;
@@ -443,5 +443,90 @@ section {
     color:#5B7F4A;
 
     border:none;
+
+}
+/* =========================
+   Specifications
+========================= */
+
+#specifications{
+
+    padding:80px 0;
+
+    background:#fff;
+
+}
+
+#specifications h2{
+
+    margin:12px 0 35px;
+
+    font-size:2rem;
+
+}
+
+#specifications-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.spec-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:20px;
+
+    background:#f8f8f5;
+
+    border-radius:18px;
+
+}
+
+.spec-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    color:#5B7F4A;
+
+    flex-shrink:0;
+
+}
+
+.spec-label{
+
+    font-size:.9rem;
+
+    color:#777;
+
+}
+
+.spec-value{
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-top:4px;
 
 }
