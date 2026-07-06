@@ -139,6 +139,48 @@
         "label": "چشم‌انداز",
         "value": "شالیزار"
     }
+],
+"amenities": [
+    {
+        "icon": "wifi",
+        "title": "اینترنت پرسرعت"
+    },
+    {
+        "icon": "flame",
+        "title": "گرمایش"
+    },
+    {
+        "icon": "snowflake",
+        "title": "سرمایش"
+    },
+    {
+        "icon": "chef-hat",
+        "title": "آشپزخانه مجهز"
+    },
+    {
+        "icon": "trees",
+        "title": "حیاط"
+    },
+    {
+        "icon": "car",
+        "title": "پارکینگ"
+    },
+    {
+        "icon": "shield-check",
+        "title": "امنیت"
+    },
+    {
+        "icon": "utensils-crossed",
+        "title": "باربیکیو"
+    },
+    {
+        "icon": "lamp",
+        "title": "آلاچیق"
+    },
+    {
+        "icon": "waves",
+        "title": "نزدیک ساحل"
+    }
 ]
 
 

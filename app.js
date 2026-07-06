@@ -22,6 +22,7 @@ async function loadProperty(){
 
     renderSpecifications(property);
     renderLocation(property);
+    renderAmenities(property);
 
 }
 
@@ -171,6 +172,35 @@ function renderLocation(property){
             <div>
                 <div class="distance-title">${item.title}</div>
                 <div class="distance-value">${item.value}</div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+    lucide.createIcons();
+
+}
+function renderAmenities(property){
+
+    const grid = document.getElementById("amenities-grid");
+
+    grid.innerHTML = "";
+
+    property.amenities.forEach(item=>{
+
+        const card = document.createElement("div");
+
+        card.className = "amenity-card";
+
+        card.innerHTML = `
+            <div class="amenity-icon">
+                <i data-lucide="${item.icon}"></i>
+            </div>
+
+            <div class="amenity-title">
+                ${item.title}
             </div>
         `;
 
