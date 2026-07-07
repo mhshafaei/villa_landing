@@ -23,6 +23,7 @@ async function loadProperty(){
     renderFloatingBar(property);
     renderFooter(property);
     renderFooter(property);
+    initShare(property);
 
 }
 
@@ -182,6 +183,8 @@ function renderLocation(property){
         grid.appendChild(card);
 
     });
+    document.getElementById("location-googleMapsUrl-btn").href =
+    property.location.googleMapsUrl;
 
     lucide.createIcons();
 
@@ -377,5 +380,44 @@ function renderFooter(property){
         property.footer.copyright;
 
     lucide.createIcons();
+
+}
+function initShare(property){
+
+const btn = document.getElementById("floating-share");
+
+    btn.addEventListener("click", async ()=>{
+
+        const shareData = {
+
+            title: property.title,
+
+            text: property.description,
+
+            url: window.location.href
+
+        };
+
+        if(navigator.share){
+
+            try{
+
+                await navigator.share(shareData);
+
+            }catch(err){
+
+                console.log("Share cancelled");
+
+            }
+
+        }else{
+
+            await navigator.clipboard.writeText(window.location.href);
+
+            alert("لینک صفحه کپی شد.");
+
+        }
+
+    });
 
 }

@@ -729,7 +729,7 @@ section {
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
 
     gap:12px;
 
@@ -747,7 +747,7 @@ section {
 
     gap:10px;
 
-    padding:16px;
+    padding:14px 10px;
 
     border-radius:18px;
 
@@ -760,9 +760,14 @@ section {
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 
     font-weight:600;
+
     transition:.25s;
+
     -webkit-tap-highlight-color:transparent;
 
+    font: inherit;          /* این خط */
+    border: none;           /* برای button */
+    cursor: pointer;        /* برای button */
 }
 .floating-btn:hover{
 
@@ -958,3 +963,56 @@ footer{
 
 }
 
+/* =========================
+   Share Section
+========================= */
+
+#share-section{
+
+    padding:80px 0;
+
+    text-align:center;
+
+    background:#fafafa;
+
+}
+
+#share-section h2{
+
+    margin-bottom:18px;
+
+}
+
+#share-section p{
+
+    max-width:620px;
+
+    margin:0 auto 35px;
+
+    line-height:2;
+
+    color:#666;
+
+}
+
+#share-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+.floating-btn.share{
+
+    background:#4b5563;
+
+}
+.location-action{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
