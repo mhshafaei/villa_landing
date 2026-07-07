@@ -855,3 +855,106 @@ section {
     left:30px;
 
 }
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    background:#1f1f1f;
+
+    color:white;
+
+    padding:60px 0 25px;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-brand{
+
+    max-width:500px;
+
+}
+
+.footer-brand h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:15px;
+
+}
+
+.footer-brand p{
+
+    color:#cfcfcf;
+
+    line-height:2;
+
+}
+
+.footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer-contact a{
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.footer-contact a:hover{
+
+    color:#8db97d;
+
+}
+
+.footer-bottom{
+
+    margin-top:45px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#aaa;
+
+    font-size:.9rem;
+
+}
+.footer-phone{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    color:#ddd;
+
+}
+
