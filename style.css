@@ -760,6 +760,13 @@ section {
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 
     font-weight:600;
+    transition:.25s;
+    -webkit-tap-highlight-color:transparent;
+
+}
+.floating-btn:hover{
+
+    transform:translateY(-2px);
 
 }
 

@@ -16,13 +16,10 @@ async function loadProperty(){
     renderGallery(property);
     renderHighlights(property);
     renderCTA(property);
-
-// console.log(property);
-// console.log(property.specifications);
-
     renderSpecifications(property);
     renderLocation(property);
     renderAmenities(property);
+    renderFloatingBar(property);
 
 }
 
@@ -96,10 +93,14 @@ function renderCTA(property){
     callBtn.textContent = property.cta.callButton;
     callBtn.href = `tel:${property.contact.phone}`;
 
+
     const bleBtn = document.getElementById("ble-btn");
     bleBtn.textContent = property.cta.bleButton;
     bleBtn.href = `https://ble.ir/${property.contact.ble}`;
     bleBtn.target = "_blank";
+    
+    // console.log(callBtn.href);
+    // console.log(baleBtn.href);
 
 }
 
@@ -207,6 +208,21 @@ function renderAmenities(property){
         grid.appendChild(card);
 
     });
+
+    lucide.createIcons();
+
+}
+function renderFloatingBar(property){
+
+
+
+    const callBtn = document.getElementById("floating-call");
+    const baleBtn = document.getElementById("floating-bale");
+
+    callBtn.href = `tel:${property.contact.phone}`;
+
+    baleBtn.href = `https://ble.ir/${property.contact.bale}`;
+
 
     lucide.createIcons();
 
