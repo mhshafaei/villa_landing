@@ -14,6 +14,7 @@ async function loadProperty(){
         property.description;
 
     renderGallery(property);
+    initLightbox();
     renderHighlights(property);
     renderCTA(property);
     renderSpecifications(property);
@@ -225,5 +226,86 @@ function renderFloatingBar(property){
 
 
     lucide.createIcons();
+
+}
+function initLightbox(){
+
+    const lightbox = document.getElementById("lightbox");
+    const image = document.getElementById("lightbox-image");
+
+    const close = document.getElementById("lightbox-close");
+    const next = document.getElementById("lightbox-next");
+    const prev = document.getElementById("lightbox-prev");
+
+    const images = document.querySelectorAll(".gallery-item img");
+
+    let currentIndex = 0;
+
+    images.forEach((img,index)=>{
+
+        img.addEventListener("click",()=>{
+
+            currentIndex = index;
+
+            image.src = img.src;
+
+            lightbox.style.display = "flex";
+
+        });
+
+    });
+
+    close.addEventListener("click",()=>{
+
+        lightbox.style.display = "none";
+
+    });
+
+    next.addEventListener("click",()=>{
+
+        currentIndex++;
+
+        if(currentIndex >= images.length){
+
+            currentIndex = 0;
+
+        }
+
+        image.src = images[currentIndex].src;
+
+    });
+
+    prev.addEventListener("click",()=>{
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+
+            currentIndex = images.length - 1;
+
+        }
+
+        image.src = images[currentIndex].src;
+
+    });
+
+    lightbox.addEventListener("click",(e)=>{
+
+    if(e.target === lightbox){
+
+        lightbox.style.display = "none";
+
+    }
+
+});
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key === "Escape"){
+
+        lightbox.style.display = "none";
+
+    }
+
+});
 
 }
