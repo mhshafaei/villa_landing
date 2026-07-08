@@ -14,7 +14,7 @@
 
     "Map": "https://maps.google.com/?q=37.370291,49.790197",
 
-    "distances":[
+    "distances":[ 
         {
             "icon":"waves",
             "title":"دریا",
