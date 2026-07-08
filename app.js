@@ -445,7 +445,7 @@ function initMapModal(property){
 
     document.querySelectorAll("#map-app-list a").forEach(link=>{
         link.target="_blank";
-    });
+    }); 
 
     openBtn.addEventListener("click",function(e){
 
