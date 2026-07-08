@@ -337,15 +337,7 @@ function renderFooter(property){
 
     // document.querySelector(".footer-bottom").textContent =
     //     property.footer.copyright;
-    document.querySelector(".footer-bottom").innerHTML =
-`
-Designed by
-<a href="https://ble.ir/mhshafaeizadeh"
-   target="_blank"
-   rel="noopener">
-   Shafaeizadeh
-</a>
-`;
+    
     
     lucide.createIcons();
 
@@ -386,8 +378,15 @@ function renderFooter(property){
 
 
 
-    document.querySelector(".footer-bottom").textContent =
-        property.footer.copyright;
+    document.querySelector(".footer-bottom").innerHTML =
+`
+Designed & Developed by 
+<a href="https://ble.ir/mhshafaeizadeh"
+   target="_blank"
+   rel="noopener">
+   Shafaeizadeh
+</a>
+`;
 
     lucide.createIcons();
 

@@ -949,6 +949,25 @@ footer{
     font-size:.9rem;
 
 }
+.footer-bottom a{
+
+    color:inherit;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    transition:.2s;
+
+    color: #1b8a5c;
+
+}
+
+.footer-bottom a:hover{
+
+    color:#5B7F4A;
+
+}
 .footer-phone{
 
     display:flex;

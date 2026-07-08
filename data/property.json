@@ -88,17 +88,17 @@
 "contact": {
     "name": "مصطفی نجمیان",
     "phone": "09127136830",
-    "ble": "mhshafaeizadeh"
+    "ble": "M.najmian"
 },
 
 "contacts": [
     {
         "name": " نجمیان",
-        "phone": "09127136830"
+        "phone": "۰۹۱۲۷۱۳۶۸۳۰"
     },
     {
         "name": " شفائی زاده",
-        "phone": "09124900253"
+        "phone": "۰۹۱۲۴۹۰۰۲۵۳"
     }
 ],
   
@@ -114,22 +114,22 @@
     {
         "icon": "ruler",
         "label": "زیربنا",
-        "value": "180 متر"
+        "value": "۱۸۰ متر"
     },
     {
         "icon": "trees",
         "label": "زمین",
-        "value": "260 متر"
+        "value": "۲۶۰ متر"
     },
     {
         "icon": "bed-double",
         "label": "اتاق خواب",
-        "value": "2"
+        "value": "۲"
     },
     {
         "icon": "car",
         "label": "پارکینگ",
-        "value": "1 خودرو"
+        "value": "۲ خودرو"
     },
     {
         "icon": "building-2",
@@ -139,7 +139,7 @@
     {
         "icon": "calendar",
         "label": "سال ساخت",
-        "value": "1405"
+        "value": "۱۴۰۵"
     },
     {
         "icon": "waves",
@@ -206,7 +206,7 @@
 
     "baleLabel":"بله",
 
-    "copyright":"Designed & Developed by Shafaeizadeh (09124900253)"
+    "copyright":"Designed & Developed by Shafaeizadeh"
 
 }
 
