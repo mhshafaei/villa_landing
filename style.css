@@ -278,9 +278,9 @@ section {
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:16px;
+    gap:6px;
 
     margin-top:30px;
 
@@ -290,7 +290,7 @@ section {
 
     overflow:hidden;
 
-    border-radius:18px;
+    border-radius:5px;
 
     aspect-ratio:1/1;
 
