@@ -60,7 +60,7 @@
   {
     "icon": "house",
     "title": "آماده استفاده",
-    "text": "آب، برق، گاز  و مسیر آسفالت؛ همه چیز از روز اول مهیاست."
+    "text": "آب، برق، گاز، آنتن دهی کامل موبایل و مسیر آسفالت؛ همه چیز از روز اول مهیاست."
   },
   {
     "icon": "map-pinned",
@@ -88,7 +88,7 @@
 "contact": {
     "name": "مصطفی نجمیان",
     "phone": "09127136830",
-    "ble": "your_ble_id"
+    "ble": "mhshafaeizadeh"
 },
 
 "contacts": [
@@ -114,32 +114,32 @@
     {
         "icon": "ruler",
         "label": "زیربنا",
-        "value": "۲۵۰ متر"
+        "value": "180 متر"
     },
     {
         "icon": "trees",
         "label": "زمین",
-        "value": "۳۰۰ متر"
+        "value": "260 متر"
     },
     {
         "icon": "bed-double",
         "label": "اتاق خواب",
-        "value": "۳"
+        "value": "2"
     },
     {
         "icon": "car",
         "label": "پارکینگ",
-        "value": "۲ خودرو"
+        "value": "1 خودرو"
     },
     {
         "icon": "building-2",
         "label": "نوع سند",
-        "value": "شش دانگ"
+        "value": "تک برگ "
     },
     {
         "icon": "calendar",
         "label": "سال ساخت",
-        "value": "۱۴۰۲"
+        "value": "1405"
     },
     {
         "icon": "waves",
@@ -155,23 +155,23 @@
 "amenities": [
     {
         "icon": "wifi",
-        "title": "اینترنت پرسرعت"
+        "title": "آنتن دهی کامل همراه اول و ایرانسل"
     },
     {
         "icon": "flame",
-        "title": "گرمایش"
+        "title": "گرمایش پکیج"
     },
     {
         "icon": "snowflake",
-        "title": "سرمایش"
+        "title": "سرمایش اسپلیت"
     },
     {
         "icon": "chef-hat",
-        "title": "آشپزخانه مجهز"
+        "title": "آشپزخانه اوپن"
     },
     {
         "icon": "trees",
-        "title": "حیاط"
+        "title": "دو حیاط"
     },
     {
         "icon": "car",
@@ -183,11 +183,11 @@
     },
     {
         "icon": "utensils-crossed",
-        "title": "باربیکیو"
+        "title": "محوطه سازی شخصی"
     },
     {
         "icon": "lamp",
-        "title": "آلاچیق"
+        "title": "نورپردازی"
     },
     {
         "icon": "waves",
@@ -206,7 +206,7 @@
 
     "baleLabel":"بله",
 
-    "copyright":"© 2026 تمامی حقوق محفوظ است."
+    "copyright":"Designed by Shafaeizadeh"
 
 }
 
