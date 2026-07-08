@@ -482,33 +482,16 @@ function initMapModal(property){
 
 }
 
-const ANALYTICS_URL = "https://script.google.com/macros/s/AKfycbyd1lOn2ZudEVRB4-3Ulw1WvMmTtB1FyqbhLEMFUOEDYlhkqHCTpiLJFuLMNVr8c8aQqA/exec";
+const ANALYTICS_URL = "https://script.google.com/macros/s/AKfycbyd1lOn2ZudEVRB4-3Ulw1WvMmTtB1FyqbhLEMFUOEDYlhkqHCTpiLJFuLMNVr8c8aQqA/exec"; 
 
-async function trackVisit(){
-    console.log("Track Visit");
+function trackVisit(){
 
-    // try{
+    const url =
+        ANALYTICS_URL +
+        "?page=" + encodeURIComponent(window.location.pathname) +
+        "&ua=" + encodeURIComponent(navigator.userAgent) +
+        "&ref=" + encodeURIComponent(document.referrer);
 
-    //     await fetch(ANALYTICS_URL,{
-
-    //         method:"POST",
-
-    //         body:JSON.stringify({
-
-    //             page:window.location.pathname,
-
-    //             userAgent:navigator.userAgent,
-
-    //             referrer:document.referrer
-
-    //         })
-
-    //     });
-
-    // }catch(err){
-
-    //     console.log(err);
-
-    // }
+    new Image().src = url;
 
 }
