@@ -24,6 +24,7 @@ async function loadProperty(){
     renderFooter(property);
     renderFooter(property);
     initShare(property);
+    initMapModal(property);
 
 }
 
@@ -183,8 +184,8 @@ function renderLocation(property){
         grid.appendChild(card);
 
     });
-    document.getElementById("location-googleMapsUrl-btn").href =
-    property.location.googleMapsUrl;
+    // document.getElementById("location-Map-btn").href =
+    // property.location.Map;
 
     lucide.createIcons();
 
@@ -415,6 +416,56 @@ const btn = document.getElementById("floating-share");
             await navigator.clipboard.writeText(window.location.href);
 
             alert("لینک صفحه کپی شد.");
+
+        }
+
+    });
+
+}
+function initMapModal(property){
+
+    const modal = document.getElementById("map-modal");
+
+    const openBtn = document.getElementById("location-Map-btn");
+
+    const closeBtn = document.getElementById("map-close");
+
+    const lat = property.location.latitude;
+    const lng = property.location.longitude;
+
+    document.getElementById("map-google").href =
+        `https://www.google.com/maps?q=${lat},${lng}`;
+
+    document.getElementById("map-neshan").href =
+        `https://nshn.ir/?lat=${lat}&lng=${lng}`;
+
+    document.getElementById("map-snapp").href =
+        `https://app.snapp.taxi/pre-ride?lat=${lat}&lng=${lng}`;
+
+
+    document.querySelectorAll("#map-app-list a").forEach(link=>{
+        link.target="_blank";
+    });
+
+    openBtn.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        modal.classList.add("show");
+
+    });
+
+    closeBtn.addEventListener("click",function(){
+
+        modal.classList.remove("show");
+
+    });
+
+    modal.addEventListener("click",function(e){
+
+        if(e.target===modal){
+
+            modal.classList.remove("show");
 
         }
 
