@@ -228,7 +228,7 @@ function renderFloatingBar(property){
 
     callBtn.href = `tel:${property.contact.phone}`;
 
-    baleBtn.href = `https://ble.ir/${property.contact.bale}`;
+    baleBtn.href = `https://ble.ir/${property.contact.ble}`;
 
 
     lucide.createIcons();
@@ -323,21 +323,30 @@ function renderFooter(property){
     document.getElementById("footer-text").textContent =
         property.footer.text;
 
-    document.querySelector("#footer-phone span").textContent =
-        property.footer.phoneLabel;
+    // document.querySelector("#footer-phone span").textContent =
+    //     property.footer.phoneLabel;
 
-    document.querySelector("#footer-bale span").textContent =
-        property.footer.baleLabel;
+    // document.querySelector("#footer-bale span").textContent =
+    //     property.footer.baleLabel;
 
-    document.getElementById("footer-phone").href =
-        `tel:${property.contact.phone}`;
+    // document.getElementById("footer-phone").href =
+    //     `tel:${property.contact.phone}`;
 
-    document.getElementById("footer-bale").href =
-        `https://wa.me/${property.contact.bale}`;
+    // document.getElementById("footer-bale").href =
+    //     `https://wa.me/${property.contact.bale}`;
 
-    document.querySelector(".footer-bottom").textContent =
-        property.footer.copyright;
-
+    // document.querySelector(".footer-bottom").textContent =
+    //     property.footer.copyright;
+    document.querySelector(".footer-bottom").innerHTML =
+`
+Designed by
+<a href="https://ble.ir/mhshafaeizadeh"
+   target="_blank"
+   rel="noopener">
+   Shafaeizadeh
+</a>
+`;
+    
     lucide.createIcons();
 
 }
